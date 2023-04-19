@@ -1,0 +1,45 @@
+BEP
+composes Bordado // Outro tipo de associação: Aggregates
+---
+- bordado: Bordado[10]
+- compras: Compras[10]
+---
++ BEP()
++ cadastraBordado(numeroBordado: int, numeroLinhas: int, numeroColunas: int): str
++ exibeMenu(): str
++ atualizarBordado(numeroBordado: int, pontos: str, numeroLinhas: int, numeroColunas: int): str
++ imprimeBordado(numeroBordado: int): str
++ listaBordados(): str
++ cadastrarCompras(numerosBordados: array, preco: double): int
++ imprimeCompra(numeroCompra: int): str
+---
+Compra
+composes Bordado // Outro tipo de associação: Aggregates
+---
+- bordados: Bordado[10]
+- preco: double
+---
++ getBordados(): array
++ getPreco(): double
++ setBordados(bordados: array): void
++ setPreco(novoPreco: double): void
++ toString(): str
+---
+Bordado
+---
+- numeroBordado: int
+- numerosDeLinhas: int
+- numerosDeColunas: int
+- pontos: str
+---
++ Bordado(numeroBordado: int, numerosDeLinhas: int, numerosDeColunas: int)
++ getNumeroBordado(): int
++ getNumeroLinhas(): int
++ getNumeroColunas(): int
++ getPontos(): str
++ setNumeroBordado(novoNumeroBordado: int):void
++ setNumeroLinhas(numeroLinhas: int):void
++ setNumeroColunas(numeroColunas: int):void
++ setPontos(): void
++ toString(): str
+---
